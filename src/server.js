@@ -26,7 +26,7 @@ nunjucks.configure("src/views", { // Pasta onde estão os arquivos htmls
 // Configurar rotas
 server.get("/", (req, res) => {
     // return res.sendFile(__dirname + "/views/index.html") // Sem nunjucks, chamar sendFile() e apontar direto pro arquivo
-    return res.render("index.html", { title: "Um Título"}) // Com nunjucks, chamar render() e apontar apenas o nome do arquivo
+    return res.render("index.html") // Com nunjucks, chamar render() e apontar apenas o nome do arquivo
 })
 
 server.get("/create-point", (req, res) => {

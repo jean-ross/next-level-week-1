@@ -1,4 +1,9 @@
 @media (max-width: 900px) {
+    header img {
+        transform: scale(0.7);
+        margin: -10px;
+    }
+
     #page-home {
         background-position-x: 70vw;
     }
@@ -11,6 +16,7 @@
     #page-home header a {
         position: absolute; /* Cria uma nova camada, liberando as propriedades abaixo */
         bottom: 48px;
+        width: fit-content;
 
         left: 50%;
         transform: translateX(-50%);
@@ -24,9 +30,9 @@
         grid-template-columns: 1fr 1fr;
     }
 
-    #page-search-results .cards img {
+    /* #page-search-results .cards img {
         height: 250px;
-    }
+    } */
 
     #page-create-point .field-group {
         flex-direction: column;
@@ -34,6 +40,90 @@
 
     #page-create-point .field-group .field + .field {
         margin-left: 0;
+    }
+}
+
+@media (max-height: 700px) {
+
+    #page-home main h1 {
+        font-size: 28px;
+    }
+
+    #page-home main p {
+        font-size: 18px;
+    }
+}
+
+@media (max-height: 560px) {
+    #page-home header a {
+        bottom: -8px;
+        margin-bottom: 15px;
+    }
+
+    #page-home main {
+        justify-content: flex-start;
+        padding-top: 60px;
+    }
+
+    .items-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 360px) {
+    form {
+        margin: 40px auto;
+        padding: 10px;
+    }
+
+    form h1 {
+        font-size: 32px;
+        border-bottom: 1px;
+    }
+}
+
+@media (max-width: 620px) {
+    .items-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    #modal .content {
+        padding: 20px;
+    }
+
+    #modal .header h1 {
+        font-size: 28px;
+    }
+
+    #modal form input,
+    form input,
+    form select {
+        padding: 12px 12px;
+    }
+    
+    #modal form button {
+        width: 44px;
+        height: 44px;
+    }
+
+    #page-search-results main {
+        margin: 36px 12px;
+    }
+
+    #page-search-results main img {
+        width: 250px;
+        height: 100%;
+    }
+
+    #page-search-results main .cards {
+        grid-template-columns: 1fr;
+        width: fit-content;
+    
+        gap: 40px;
     }
 }
 

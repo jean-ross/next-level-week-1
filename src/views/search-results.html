@@ -37,7 +37,7 @@
                     <div class="card">
                         <img src="{{ place.image }}" alt="{{ place.name }}">
                         <h1>{{ place.name }}</h1>
-                        <h3>{{ place.items }}</h3>
+                        <h3>{{ place.items.split(',').join(', ') }}</h3>
                         <p>
                             {{ place.city }},
                             {{ place.state }}<br/>
