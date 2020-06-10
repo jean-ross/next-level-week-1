@@ -13,7 +13,7 @@
         text-align: center;
     }
 
-    #page-home header a {
+    #page-home header ul {
         position: absolute; /* Cria uma nova camada, liberando as propriedades abaixo */
         bottom: 48px;
         width: fit-content;

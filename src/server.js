@@ -77,6 +77,20 @@ server.post("/savepoint", (req, res) => {
     db.run(query, values, afterInsertData)
 })
 
+server.get("/show-all", (req, res) => {
+
+    db.all(`SELECT * FROM places`, function(err, rows) {
+        if(err) {
+            return console.log(err)
+        }
+
+        const total = rows.length
+
+        // Mostrar a página html com os dados do banco de dados
+        return res.render("search-results.html", { places: rows, total})
+    })
+})
+
 server.get("/search", (req, res) => {
 
     const search = req.query.search
